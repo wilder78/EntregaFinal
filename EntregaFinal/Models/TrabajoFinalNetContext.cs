@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntregaFinal.Models;
 
-public partial class TrabajoFinalNetContext : DbContext
+public partial class TrabajoFinalNetContext : IdentityDbContext
 {
     public TrabajoFinalNetContext()
     {
@@ -49,8 +50,11 @@ public partial class TrabajoFinalNetContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<CalificacionesProducto>(entity =>
         {
+
             entity.HasKey(e => e.CalificacionId).HasName("PK__Califica__4CF54ABE1478A61C");
 
             entity.HasIndex(e => e.ProductoId, "IX_Calificaciones_ProductoID");

@@ -1,22 +1,31 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* General body styling */
 body {
-  margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* A light gray background for a cleaner look */
+}
+
+/* Navbar styling */
+.navbar {
+    border-bottom: 2px solid #ffc107 !important; /* A bold, contrasting border */
+}
+
+/* Navbar links and brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffc107 !important; /* Brand color to stand out */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; /* White links on a dark background */
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ffc107 !important; /* Yellow hover effect for brand consistency */
+    }
+
+/* Icons */
+.nav-link .fas {
+    font-size: 1.2rem;
 }
